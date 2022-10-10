@@ -13,9 +13,16 @@ function listMovies() {
     .groupBy("movies.movie_id");
 }
 
+function read(movieId) {
+    return knex("movies")
+    .select("movies.*")
+    .where({"movies.movie_id": movieId})
+    .first()
+}
+
 module.exports = {
   list,
-  //   read,
+  read,
   listMovies,
   //   listMovieTheaters,
   //   listMovieReviews,
