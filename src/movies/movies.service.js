@@ -65,7 +65,7 @@ function listMovieReview(movieId) {
       "c.organization_name"
     )
     .where({ "reviews.movie_id": movieId })
-    .then(addCritic)
+    .then(addCritic);
 }
 
 module.exports = {

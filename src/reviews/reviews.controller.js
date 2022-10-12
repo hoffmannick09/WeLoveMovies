@@ -30,5 +30,3 @@ module.exports = {
   update: [asyncErrorBoundary(reviewExists), asyncErrorBoundary(update)],
   delete: [asyncErrorBoundary(reviewExists), asyncErrorBoundary(destroy)],
 };
-
-
